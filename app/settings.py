@@ -113,6 +113,10 @@ USE_I18N = True
 
 USE_TZ = True
 
+REST_FRAMEWORK = {
+    'DATE_FORMAT': "%d-%m-%Y",
+    'DATETIME_FORMAT': "%d-%m-%Y - %H:%M:%S",
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
