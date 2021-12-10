@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from rest_framework import generics
+from vehicle.serializers import VehicleDetailSerializer
 
-# Create your views here.
+
+class DriverCreateView(generics.CreateAPIView):
+    serializer_class = VehicleDetailSerializer
