@@ -6,4 +6,3 @@ class Driver(models.Model):
     last_name = models.CharField(verbose_name='Фамилия', max_length=50)
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-
