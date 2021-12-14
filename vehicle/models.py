@@ -7,6 +7,13 @@ class Driver(models.Model):
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
+    class Meta:
+        verbose_name = 'Водителя'
+        verbose_name_plural = 'Водителя'
+
 
 class Vehicle(models.Model):
     driver_id = models.ForeignKey(Driver, on_delete=models.SET_NULL, null=True, default=None)
@@ -16,3 +23,9 @@ class Vehicle(models.Model):
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return f"{self.model} {self.plate_number}"
+
+    class Meta:
+        verbose_name = 'Машину'
+        verbose_name_plural = 'Машины'
