@@ -21,7 +21,7 @@ class VehicleListCreateView(generics.ListCreateAPIView):
     serializer_class = VehicleDetailSerializer
     queryset = Vehicle.objects.all()
     filter_backends = (DjangoFilterBackend, SearchFilter)
-    search_fields = ('driver_id',)
+    filter_fields = ('driver_id',)
 
 
 class VehicleDetailView(generics.RetrieveUpdateDestroyAPIView):
