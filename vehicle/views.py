@@ -3,7 +3,7 @@ from vehicle.serializers import DriverDetailSerializer, VehicleDetailSerializer
 from vehicle.models import Driver, Vehicle
 from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
-from django_filters import FilterSet, DateFilter, AllValuesFilter
+from django_filters import FilterSet, DateFilter, BooleanFilter
 
 
 class DriverFilter(FilterSet):
@@ -31,7 +31,7 @@ class DriverDetailView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class VehicleFilter(FilterSet):
-    with_drivers = AllValuesFilter(field_name='driver_id')
+    with_drivers = BooleanFilter(field_name="driver_id", lookup_expr='isnull')
 
     class Meta:
         model = Vehicle
