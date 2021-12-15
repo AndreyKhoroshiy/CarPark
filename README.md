@@ -11,8 +11,8 @@
 
 ## endpoint для модели Vehicle:
     * + GET /vehicles/vehicle/ - вивід списку машин
-    * + GET /vehicles/vehicle/?with_drivers=yes - вивід списку машин з водіями
-    * + GET /vehicles/vehicle/?with_drivers=no - вивід списку машин без водіїв
+    * + GET /vehicles/vehicle/?with_drivers=true - вивід списку машин з водіями
+    * + GET /vehicles/vehicle/?with_drivers=false - вивід списку машин без водіїв
     * + GET /vehicles/vehicle/<vehicle_id> - отримання інформації по певній машині
     * + POST /vehicles/vehicle/ - створення нової машини
     * + UPDATE /vehicles/vehicle/<vehicle_id>/ - редагування машини
